@@ -219,7 +219,7 @@ class DabMOve_DetectionGUI:
         right_hip = results.pose_landmarks.landmark[self.mp_holistic.PoseLandmark.RIGHT_HIP]
         midpoint = ((left_hip.x + right_hip.x) / 2, (left_hip.y + right_hip.y) / 2)
         distance_from_hip= (abs(midpoint[0]-left_hip.x),abs(midpoint[1] - left_hip.y))
-        bally_button=(midpoint[0]  , (midpoint[1] - distance_from_hip[0])-distance_from_hip[0]/4)
+        bally_button=(midpoint[0]  , (midpoint[1] - distance_from_hip[0])-distance_from_hip[0])
         return bally_button
         
     
